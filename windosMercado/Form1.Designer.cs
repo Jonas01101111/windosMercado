@@ -30,17 +30,17 @@
         {
             this.lbItens = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tbVal = new System.Windows.Forms.TextBox();
             this.tbQuant = new System.Windows.Forms.TextBox();
             this.tbProd = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,6 @@
             this.lbItens.Name = "lbItens";
             this.lbItens.Size = new System.Drawing.Size(335, 277);
             this.lbItens.TabIndex = 0;
-            
             // 
             // groupBox1
             // 
@@ -61,7 +60,7 @@
             this.groupBox1.Controls.Add(this.tbVal);
             this.groupBox1.Controls.Add(this.tbQuant);
             this.groupBox1.Controls.Add(this.tbProd);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -74,15 +73,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(270, 339);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(132, 63);
-            this.btnClear.TabIndex = 11;
-            this.btnClear.Text = "Nova Venda";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(442, 339);
@@ -91,6 +81,7 @@
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Fechar";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // button1
             // 
@@ -128,15 +119,14 @@
             this.tbProd.Size = new System.Drawing.Size(334, 31);
             this.tbProd.TabIndex = 6;
             // 
-            // label5
+            // lblTotal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(791, 343);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 39);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "R$ 0,00";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(791, 343);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 39);
+            this.lblTotal.TabIndex = 5;
             // 
             // label4
             // 
@@ -178,6 +168,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Produto";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(270, 339);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(132, 63);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "Nova Venda";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,11 +201,11 @@
         private System.Windows.Forms.TextBox tbVal;
         private System.Windows.Forms.TextBox tbQuant;
         private System.Windows.Forms.TextBox tbProd;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ListBox lbItens;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
